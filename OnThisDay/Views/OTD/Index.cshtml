@@ -2,16 +2,30 @@
 @model OnThisDay.Models.OTD.Root;
 
 <div class="container">
-    <div class="row">
-        @foreach(var e in @Model.events){
-            <div class="col-md-4">
-                <div class="card" style="width: 100%;">
-                    <div class="card-body">
-                        <h5 class="card-title">@e.year</h5>
-                        <p class="card-text">@e.text</p>
+    <button id="toggleButton" class="btn btn-primary">Events</button>
+    <div id="cardContainer" style="display: none;">
+        <div class="row">
+            @foreach(var e in @Model.events){
+                <div class="col-md-4">
+                    <div class="card" style="width: 100%;">
+                        <div class="card-body">
+                            <h5 class="card-title">@e.year</h5>
+                            <p class="card-text">@e.text</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-        }
+            }
+        </div>
     </div>
 </div>
+
+<script>
+    document.getElementById('toggleButton').addEventListener('click', function() {
+        var container = document.getElementById('cardContainer');
+        if (container.style.display === 'none') {
+            container.style.display = 'block';
+        } else {
+            container.style.display = 'none';
+        }
+    });
+</script>
