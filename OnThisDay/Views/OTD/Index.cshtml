@@ -1,11 +1,17 @@
 @using OnThisDay.Models;
 @model OnThisDay.Models.OTD.Root;
 
-@foreach(var e in @Model.events){
-	<div class="card" style="width: 18rem;">
-  <div class="card-body">
-	<h5 class="card-title">@e.year</h5>
-	<p class="card-text">@e.text</p>
-  </div>
+<div class="container">
+    <div class="row">
+        @foreach(var e in @Model.events){
+            <div class="col-md-4">
+                <div class="card" style="width: 100%;">
+                    <div class="card-body">
+                        <h5 class="card-title">@e.year</h5>
+                        <p class="card-text">@e.text</p>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
 </div>
-}
