@@ -42,7 +42,7 @@ namespace OnThisDay.Controllers
 		catch (HttpRequestException ex)
 		{
 			Console.WriteLine($"Request failed: {ex.Message}");
-			return StatusCode(500, "Error fetching data from Wikimedia API! /n Please refresh the browser to retry");
+			return StatusCode(500, "Error fetching data from Wikimedia API! \n Please refresh the browser to retry");
 		}
 	}
 	}
