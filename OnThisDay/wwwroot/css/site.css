@@ -22,10 +22,11 @@ body {
 }
 
 .card {
-    height: 250px; /* Set a fixed height */
     display: flex;
     flex-direction: column;
     justify-content: space-between; /* Align content evenly */
+    min-height: 250px; /* Set a minimum height */
+    padding-bottom: 30px; /* Increase padding to the bottom */
 }
 
 #toggleButton {
@@ -44,4 +45,3 @@ body {
 .form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
     text-align: start;
 }
-
