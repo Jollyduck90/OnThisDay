@@ -20,11 +20,19 @@ namespace OnThisDay.Controllers
 			_httpClient = new HttpClient();
 		}
 
-	public async Task<IActionResult> Index()
+	public async Task<IActionResult> Index(string month = null, string day = null)
 	{
+		if(string.IsNullOrEmpty(month) || string.IsNullOrEmpty(day))
+		{
+			month = DateTime.Now.ToString("MM");
+			day = DateTime.Now.ToString("dd");
+
+		}
+		ViewData["month"] = month;
+		ViewData["day"] = day;
 		try
 		{
-			var url = "https://api.wikimedia.org/feed/v1/wikipedia/en/onthisday/all/02/04";
+			var url = $"https://api.wikimedia.org/feed/v1/wikipedia/en/onthisday/all/{month}/{day}";
 			
 			HttpResponseMessage response = await _httpClient.GetAsync(url);
 
@@ -42,7 +50,8 @@ namespace OnThisDay.Controllers
 		catch (HttpRequestException ex)
 		{
 			Console.WriteLine($"Request failed: {ex.Message}");
-			return StatusCode(500, "Error fetching data from Wikimedia API! \n Please refresh the browser to retry");
+			return StatusCode(500, "Error fetching data from Wikimedia API! \n Please refresh the page to retry");
+			
 		}
 	}
 	}
