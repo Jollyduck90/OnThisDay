@@ -1,16 +1,15 @@
 @using OnThisDay.Models;
 @model OnThisDay.Models.OTD.Root;
 
-
-
 <div class="container">
+	<h2>On this day: @ViewData["month"]/@ViewData["day"]</h2>
 	<form method="get" asp-controller="OTD" asp-action="Index">
 	<div class="form-group">
 		<input type="text" name="month" class="form-control" placeholder="Month 01-12" required/>
 		<input type="text" name="day" class="form-control" placeholder="Day 01-31" required/>
 		<button type="submit" class="btn btn-primary mt-2">Search</button>
 	</div>
-</form>
+	</form>
 	<button id="EventsButton" class="btn btn-primary" style="margin-bottom: 20px; margin-top: 20px;">Events</button>
 	<div id="EventsContainer" style="display: none;">
 		<div class="row">
