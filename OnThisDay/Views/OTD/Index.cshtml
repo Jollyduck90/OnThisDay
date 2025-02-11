@@ -3,6 +3,7 @@
 
 <div class="container">
 	<h2>On this day: @ViewData["month"] @ViewData["day"] </h2>
+	
 	<form method="get" asp-controller="OTD" asp-action="Index">
 	<div class="form-group">
 		<input type="text" name="day" class="form-control" placeholder="Day 01-31" required/>
@@ -10,6 +11,7 @@
 		<button type="submit" class="btn btn-primary mt-2">Search</button>
 	</div>
 	</form>
+	
 	<button id="EventsButton" class="btn btn-primary" style="margin-bottom: 20px; margin-top: 20px;">Events</button>
 	<div id="EventsContainer" style="display: none;">
 		<div class="row">
@@ -17,6 +19,11 @@
 				<div class="col-md-4">
 					<div class="card" style="width: 100%;">
 						<div class="card-body">
+							<svg fill="#000000" xmlns="http://www.w3.org/2000/svg" width="64px" height="64px" viewBox="0 0 100 100" xml:space="preserve">
+								<g id="SVGRepo_bgCarrier" stroke-width="0"/>
+								<g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+								<g id="SVGRepo_iconCarrier"> <g> <g> <path d="M76,42H24c-1.1,0-2,0.9-2,2v30c0,3.3,2.7,6,6,6h44c3.3,0,6-2.7,6-6V44C78,42.9,77.1,42,76,42z M40,70 c0,1.1-0.9,2-2,2h-4c-1.1,0-2-0.9-2-2v-4c0-1.1,0.9-2,2-2h4c1.1,0,2,0.9,2,2V70z M40,56c0,1.1-0.9,2-2,2h-4c-1.1,0-2-0.9-2-2v-4 c0-1.1,0.9-2,2-2h4c1.1,0,2,0.9,2,2V56z M54,70c0,1.1-0.9,2-2,2h-4c-1.1,0-2-0.9-2-2v-4c0-1.1,0.9-2,2-2h4c1.1,0,2,0.9,2,2V70z M54,56c0,1.1-0.9,2-2,2h-4c-1.1,0-2-0.9-2-2v-4c0-1.1,0.9-2,2-2h4c1.1,0,2,0.9,2,2V56z M68,70c0,1.1-0.9,2-2,2h-4 c-1.1,0-2-0.9-2-2v-4c0-1.1,0.9-2,2-2h4c1.1,0,2,0.9,2,2V70z M68,56c0,1.1-0.9,2-2,2h-4c-1.1,0-2-0.9-2-2v-4c0-1.1,0.9-2,2-2h4 c1.1,0,2,0.9,2,2V56z"/> </g> <g> <path d="M72,26h-5v-2c0-2.2-1.8-4-4-4s-4,1.8-4,4v2H41v-2c0-2.2-1.8-4-4-4s-4,1.8-4,4v2h-5c-3.3,0-6,2.7-6,6v2 c0,1.1,0.9,2,2,2h52c1.1,0,2-0.9,2-2v-2C78,28.7,75.3,26,72,26z"/> </g> </g> </g>
+							</svg>
 							<h5 class="card-title">@e.year</h5>
 							<p class="card-text">@e.text</p>
 						</div>
@@ -35,6 +42,11 @@
 				<div class="col-md-4">
 					<div class="card" style="width: 100%;">
 						<div class="card-body">
+							<svg version="1.1" id="Uploaded to svgrepo.com" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="64px" height="64px" viewBox="0 0 32 32" xml:space="preserve" fill="#000000">
+								<g id="SVGRepo_bgCarrier" stroke-width="0"/>
+								<g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+								<g id="SVGRepo_iconCarrier"> <style type="text/css"> .sharpcorners_een{fill:#111918;} .st0{fill:#0B1719;} </style> <path class="sharpcorners_een" d="M12,5c0-2.209,1.791-4,4-4s4,1.791,4,4s-1.791,4-4,4S12,7.209,12,5z M20.621,10h-9.242 l-6.439,6.439l2.121,2.121L12,13.621V17h8v-3.379l4.939,4.939l2.121-2.121L20.621,10z M17,23l3-3v-2h-8v2l3,3H17z M13.853,23.268 l-2.121-2.121L7.879,25l5.061,5.061l2.121-2.121L12.121,25L13.853,23.268z M18.147,23.268L19.879,25l-2.939,2.939l2.121,2.121 L24.121,25l-3.853-3.853L18.147,23.268z"/> </g>
+							</svg>
 							<h5 class="card-title">@b.year</h5>
 							<p class="card-text">@b.text</p>
 						</div>
@@ -53,6 +65,11 @@
 				<div class="col-md-4">
 					<div class="card" style="width: 100%;">
 						<div class="card-body">
+							<svg version="1.1" id="_x32_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve" width="64px" height="64px" fill="#000000">
+								<g id="SVGRepo_bgCarrier" stroke-width="0"/>
+								<g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+								<g id="SVGRepo_iconCarrier"> <style type="text/css"> .st0{fill:#000000;} </style> <g> <rect x="61.046" y="445.046" class="st0" width="389.908" height="66.954"/> <path class="st0" d="M168.453,191.47c7.362,0,12.092-4.339,12.092-11.17c0-6.7-4.73-11.031-12.092-11.031h-15.762 c-0.523,0-0.784,0.262-0.784,0.784v20.631c0,0.523,0.261,0.785,0.784,0.785H168.453z"/> <path class="st0" d="M353.861,193.308c8.146,0,13.007-4.731,13.007-11.954s-4.861-12.085-13.007-12.085h-14.716 c-0.523,0-0.785,0.262-0.785,0.784v22.47c0,0.523,0.262,0.784,0.785,0.784H353.861z"/> <path class="st0" d="M402.907,417.477l40.17-303.262L358.007,0H150.054L64.985,114.215l40.169,303.262H402.907z M319.046,153.9 c0-0.792,0.523-1.315,1.315-1.315h34.677c19.446,0,31.138,11.692,31.138,28.77c0,16.815-11.823,28.638-31.138,28.638h-15.892 c-0.523,0-0.785,0.262-0.785,0.785v29.824c0,0.792-0.531,1.315-1.315,1.315h-16.685c-0.792,0-1.315-0.523-1.315-1.315V153.9z M284.361,224.839c0-0.792,0.523-1.315,1.308-1.315h15.638c0.784,0,1.315,0.523,1.315,1.315v15.762 c0,0.792-0.531,1.315-1.315,1.315h-15.638c-0.785,0-1.308-0.523-1.308-1.315V224.839z M248.615,153.9 c0-0.792,0.523-1.315,1.315-1.315h16.685c0.785,0,1.315,0.523,1.315,1.315v86.701c0,0.792-0.53,1.315-1.315,1.315H249.93 c-0.792,0-1.315-0.523-1.315-1.315V153.9z M213.93,224.839c0-0.792,0.523-1.315,1.308-1.315h15.638 c0.784,0,1.315,0.523,1.315,1.315v15.762c0,0.792-0.531,1.315-1.315,1.315h-15.638c-0.785,0-1.308-0.523-1.308-1.315V224.839z M132.592,153.9c0-0.792,0.523-1.315,1.316-1.315h35.6c18.262,0,30.346,11.431,30.346,27.716c0,11.431-6.046,20.5-15.892,24.83 l17.6,35.208c0.392,0.792,0,1.577-0.915,1.577h-18.662c-1.177,0-1.569-0.392-1.969-1.315l-15.369-32.708h-11.954 c-0.523,0-0.784,0.262-0.784,0.785v31.924c0,0.792-0.531,1.315-1.316,1.315h-16.684c-0.792,0-1.316-0.523-1.316-1.315V153.9z"/> </g> </g>
+							</svg>
 							<h5 class="card-title">@b.year</h5>
 							<p class="card-text">@b.text</p>
 						</div>
