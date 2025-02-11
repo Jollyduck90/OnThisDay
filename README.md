@@ -5,6 +5,9 @@ Using api from - https://api.wikimedia.org/wiki/Feed_API/Reference/On_this_day
 
 # How to use
 
+> [!NOTE]
+> Requires dotnet 9
+
 1. Download zip or clone repo into desired location
 2. Navigate to the directory /OnThisDay/OnThisDay in the terminal/console
 3. Run command: dotnet run
