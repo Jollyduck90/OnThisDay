@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Globalization;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
@@ -20,20 +21,22 @@ namespace OnThisDay.Controllers
 			_httpClient = new HttpClient();
 		}
 
-	public async Task<IActionResult> Index(string month = null, string day = null)
+	public async Task<IActionResult> Index(string day = null, string month = null)
 	{
 		if(string.IsNullOrEmpty(month) || string.IsNullOrEmpty(day))
 		{
 			month = DateTime.Now.ToString("MM");
 			day = DateTime.Now.ToString("dd");
-
+			
 		}
-		ViewData["month"] = month;
-		ViewData["day"] = day;
 		try
 		{
-			var url = $"https://api.wikimedia.org/feed/v1/wikipedia/en/onthisday/all/{month}/{day}";
+			int monthNum = int.Parse(month);
+			string monthName = CultureInfo.CurrentCulture.DateTimeFormat.GetMonthName(monthNum);
+			ViewData["month"] = monthName;
+			ViewData["day"] = day;
 			
+			var url = $"https://api.wikimedia.org/feed/v1/wikipedia/en/onthisday/all/{month}/{day}";
 			HttpResponseMessage response = await _httpClient.GetAsync(url);
 
 			// Log status code and response content
